@@ -12,6 +12,8 @@ import Services from './components/Services';
 import Pricing from './components/Pricing';
 import Rooms from './components/Rooms';
 import Footer from './components/Footer';
+import Home from './components/home';
+
 import SignIn from './Authentication/SignIn';
 import SignUp from './Authentication/SignUp';
 import axios from 'axios';
@@ -34,23 +36,16 @@ function App() {
     
     <Provider store={store}>
     
-    <div className="App">
-          <Navbar/>
-          <Header/>
-          <Services/>
-          <Pricing/>
-          <Rooms/>
-          <Footer/>
-     <nav className="Nav">
+  
       <Router>
        <Routes>
-        <Route exact path="/" element={<SignIn/>}/>
+        <Route exact path="/" element={<Home/>}/>
           <Route  path="/signin" element={<SignIn/>}/>
           <Route  path="/signup" element={<SignUp/>}/>
        </Routes>
     </Router>
-      </nav>
-    </div>
+     
+    
     </Provider>
     
      
